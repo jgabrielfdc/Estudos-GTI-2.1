@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Site de Estudos</title>
+    <style>
+        iframe, #comentarios{
+           margin-left: 20px;
+        }
+        #comentarios{
+            width:500px;
+            height:100px;
+            padding:5px;
+            border:1px solid blue;
+        }
+    </style>
+</head>
+<body id="home">
+<header class="sticky-top">
+    <center>
+        <h1>GTI-Estudos</h1>
+        <hr>
+        <ul>
+            <li ><a href="index.html">Home</a></li>
+            <li><a href="tecnologias.html">Tecnologias</a></li>
+            <li><a href="metodologia.html">Metodologias</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </center>
+</header>
+<br>
+<p>Site criado para a adição de conteudos e prática de programação web</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FN9dTLCCrWM?si=Dfic3dPnfWN81dN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+<textarea id='coment' style='height:100px; width:500px; margin-left:20px; padding:5px;' placeholder="Comentarios..." ></textarea>
+<input type="button" id="comenta" onclick="comenta('coment')" value="Enviar">
+<script>
+    function comenta(id){
+    var comentario=document.getElementById(id).value;
+    document.getElementById('comentarios').innerText=comentario;
+    }
+</script><br>
+<div id="comentarios"></div>
+</body>
+</html>
